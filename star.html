@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=20">
+  <title>Star pattern</title>
+</head>
+<body>
+  <h1>PYRAMID TRIANGLE STAR PATTERN</h1>
+  <script>
+    let n = 10; 
+    let string = "";
+    for (let i = 1; i <= n; i++) {
+      for (let j = n; j > i; j--) {
+        string += " ";
+      }
+      for (let k = 0; k < i * 2 - 1; k++) {
+        string += "*";
+      }
+      string += "<br>";
+    }
+    document.write(`<pre>${string}</pre>`);
+  </script>
+</body>
+</html>
