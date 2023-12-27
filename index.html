@@ -1,166 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Rashmi</title>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="CALCULATOR.CSS">
+ 
 </head>
-
 <body>
-    <inline>
-        <h1>Rashmi Mishra </h1> <img src="rashmi.jpg" alt="" hight="200px" width="100px"
-            style="float:right" />
-    </inline>
-    <!-- <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGoogle_Images&psig=AOvVaw0xfCT8SEGKz2L3j2r8Q6Zv&ust=1698140653409000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCID2xIfxi4IDFQAAAAAdAAAAABAE"> -->
-        <hr>
-    <br>
-    <img src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w600/2023/10/free-images.jpg">
-    <br>
-    <br>
-    <br>
-    <br>
-    <p id="rashmi">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium doloribus optio, architecto
-        esse corrupti
-        eum consequatur exercitationem magni delectus reiciendis inventore nulla ab. Corrupti facilis cum nobis
-        asperiores maiores eius.</p>
-    <p>first</p>
-    <p>second</p>
-    <p>third</p>
-    <p>fourth</p>
-    <a href="https://google.com" target="blank">google</a>
-    <br>
-    <a href="https://facebook.com" target="blank">facebook</a>
-    <br>
-    <a href="https://linkdin.com" target="blank">linkdin</a>
-    <br>
-    <a href="https://instagram.com" target="blank">instagram</a>
-    <ul types="circle">
-        <li>this is my first unodered list</li>
-        <li>this is my second unodered list</li>
-        <li>this is my third unodreed list</li>
-        <li>
-            <ul>
-                <li>another one</li>
-                <li>another two</li>
-                <li>another three</li>
-            </ul>
-        </li>
-    </ul>
-
-
-    <ol>
-        <li>this is my first ordered list</li>
-        <li>this is my second order list</li>
-        <li>this is my third ordered list</li>
-        <li>
-            <ol>
-                <li>list first</li>
-                <li>second list</li>
-                <li>third list</li>
-            </ol>
-        </li>
-    </ol>
-    <h3>html table</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>name</th>
-                <th>employee id</th>
-                <th>employee role</th>
-            </tr>
-        </thead>
-        <tboday>
-            <tr>
-                <td>rashmi</td>
-                <td>2342</td>
-                <td>programer</td>
-            </tr>
-            <tr>
-                <td>akansha</td>
-                <td>7354</td>
-                <td>developer</td>
-            </tr>
-            <tr>
-                <td>deeksha</td></td>
-                <td>983947</td>
-                <td>engeenier</td>
-            </tr>
-        </tboday>
-    </table>
-    <hr>
-    <table>
-        <thead>
-            <tr>
-                <th>name</th>
-                <th>roll no</th>
-                <th>subject</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>vidhi</td>
-                <td>83</td>
-                <td>math</td>
-            </tr>
-            <tr>
-                <td>tanya</td>
-                <td>98</td>
-                <td>science</td>
-            </tr>
-            <tr>
-                <td>apoorva</td>
-                <td>65</td>
-                <td>hindi</td>
-            </tr>
-
-        </tbody>
-    </table>
-    <h2>this is html forms tutorials</h2>
-    <form action="backend.php">
-        <div>
-            name <input type="text" name="my name">
+    <div id="calculator">
+        <h2>Calculator</h2>
+        
+        <textarea name="textarea" id ="display" readonly></textarea>
+        <div class="row">
+            <div class="button" onclick="addToDisplay('7')"><b>7</b></div>
+            <div class="button" onclick="addToDisplay('8')"><b>8</b></div>
+            <div class="button" onclick="addToDisplay('9')"><b>9</b></div>
+            <div class="button" onclick="addToDisplay('+')"><b>+</b></div>
         </div>
-        <div> roll:<input type="roll" roll="my roll">
+        <div class="row">
+            <div class="button" onclick="addToDisplay('4')"><b>4</b></div>
+            <div class="button" onclick="addToDisplay('5')"><b>5</b></div>
+            <div class="button" onclick="addToDisplay('6')"><b>6</b></div>
+            <div class="button" onclick="addToDisplay('-')"><b>-</b></div>
         </div>
-        </div> email <input type="email" email="my email">
+        <div class="row">
+            <div class="button" onclick="addToDisplay('1')"><b>1</b></div>
+            <div class="button" onclick="addToDisplay('2')"><b>2</b></div>
+            <div class="button" onclick="addToDisplay('3')"><b>3</b></div>
+            <div class="button" onclick="addToDisplay('*')"><b>*</b></div>
         </div>
-        <br>
-        <div>
-            date<input type="date" name="date">
+        <div class="row">
+            <div class="button" onclick="clearDisplay()"><B>C</B></div>
+            <div class="button" onclick="addToDisplay('0')"><b>0</b></div>
+            <div class="button" onclick="calculate()"><b>=</b></div>
+            <div class="button" onclick="addToDisplay('/')"><b>/</b></div>
         </div>
-        <div>
-            bonus<input type="number" name="my bonus">
-        </div>
-        <div>
-            are you eligible<input type="chekbox" name="my eligibility">
-        </div>
-        <div>
-            my gender:male<input type="radio" name="my gender"> female<input type="radio" name="my gender">
-            other<input type="radio" name="my gender">
-            <div>
-                write about your self:<br><textarea name="my text" cols="15" rows="5"></textarea>
-            </div>
-        </div>
-        <div>
-            <lable for="car">car</lable>
-            <select name="my car" id="car">
-                <option value="ind">indica</option>
-                <option value="sft">swift</option>
-            </select>
-        </div>
-        <br>
-        <div>
-            <input type="submit" value="submit now">
-
-            <input type="reset" value="reset now">
-        </div><br>
-
-    </form>
-    <span>this is a span tag</span>
-
-
+    </div>
+    <script src="CALCULATOR.JS"></script>
 </body>
-
 </html>
+  
